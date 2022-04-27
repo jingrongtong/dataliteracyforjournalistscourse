@@ -1,0 +1,21 @@
+import pandas as pd
+
+covid1=pd.read_csv('H:/dataliteracyforjournalistscourse/east_midlands_region.csv')
+covid2=pd.read_csv('H:/dataliteracyforjournalistscourse/east_of_england_region.csv')
+covid3=pd.read_csv('H:/dataliteracyforjournalistscourse/london_region.csv')
+covid4=pd.read_csv('H:/dataliteracyforjournalistscourse/east_region.csv')
+covid5=pd.read_csv('H:/dataliteracyforjournalistscourse/north_west_region.csv')
+covid6=pd.read_csv('H:/dataliteracyforjournalistscourse/south_east_region.csv')
+covid7=pd.read_csv('H:/dataliteracyforjournalistscourse/south_west_region.csv')
+covid8=pd.read_csv('H:/dataliteracyforjournalistscourse/west_midlands_region.csv')
+covid9=pd.read_csv('H:/dataliteracyforjournalistscourse/yorkshire_and_humber_region.csv')
+                   
+                   
+
+covidall=pd.concat([covid1,covid2,covid3,covid4,covid5,covid6,covid7,covid8,covid9])
+
+
+df=pd.DataFrame(covidall)
+
+
+df.to_csv('covidall.csv',na_rep='-')
